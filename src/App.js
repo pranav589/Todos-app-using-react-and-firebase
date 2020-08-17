@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import {Button,FormControl,Input,InputLabel} from '@material-ui/core'
 import "./style.css";
+import Todo from './Todo'
 
 export default function App() {
 
@@ -30,7 +31,8 @@ export default function App() {
     </form>
     <ul>
       {todos.map(todo=>(
-        <li>{todo}</li>
+        <Todo todo={todo}/>
+      //  <li>{todo}</li>
       ))}
     </ul>
     </div>
