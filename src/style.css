@@ -1,5 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body{
+  background: lightcyan
+}
+
+.app{
+  background: lightcyan;
+  display:flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: column;
+  
+  
+}
+
 .input{
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  padding:10px
 }
+
+@media(min-width:800px){
+  body{
+    font-size: 25px
+  }
+  .app{
+    height: 100vh
+    
+  }
+}
+

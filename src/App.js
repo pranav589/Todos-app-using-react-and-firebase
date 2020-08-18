@@ -36,7 +36,8 @@ export default function App() {
      setInput('')
   }
   return (
-    <div>
+    <div className='app'>
+    <h2 style={{textAlign:'center',margin:'10px'}}>Todo's App 💬</h2>
     <form className='input'>
     <FormControl>
       <InputLabel>Write a todo</InputLabel>

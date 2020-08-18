@@ -12,7 +12,7 @@ const useStyles=makeStyles((theme)=>({
     backgroundColor:theme.palette.background.paper,
     border:'2px solid #000',
     boxShadow:theme.shadows[5],
-    padding:theme.spacing(2,4,3)
+    padding:theme.spacing(2,4,3),
   }
 }))
 
@@ -35,16 +35,15 @@ function Todo(props){
 
   return(
     <>
-    <Modal open={open} onClose={e=>setOpen(false)}>
+    <Modal open={open} onClose={e=>setOpen(false)} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
     <div className={classes.paper}>
-      <h4>I am modal</h4>
       <InputLabel>Update your todo</InputLabel>
       <Input value={input} onChange={event=>setInput(event.target.value)}/>
       <Button onClick={updateTodo}>Update</Button>
     </div>
     </Modal>
     <List className='todo_list'>
-      <ListItem>
+      <ListItem >
         <ListItemText primary={props.todo.todo}/>
         <DeleteForeverIcon onClick={event=>db.collection('todos').doc(props.todo.id).delete()}/>
         <Button onClick={e=>setOpen(true)}>Edit</Button>
