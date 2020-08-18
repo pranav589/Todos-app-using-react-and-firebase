@@ -37,7 +37,7 @@ export default function App() {
   }
   return (
     <div>
-    <form>
+    <form className='input'>
     <FormControl>
       <InputLabel>Write a todo</InputLabel>
       <Input value={input} onChange={event=>setInput(event.target.value)}/>
