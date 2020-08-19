@@ -37,7 +37,9 @@ export default function App() {
   }
   return (
     <div className='app'>
-    <h2 style={{textAlign:'center',margin:'10px'}}>Todo's App 💬</h2>
+    <div className='head'>
+    <h2 style={{}}>Todo's App 💬</h2>
+    </div>
     <form className='input'>
     <FormControl>
       <InputLabel>Write a todo</InputLabel>

@@ -43,10 +43,12 @@ function Todo(props){
     </div>
     </Modal>
     <List className='todo_list'>
-      <ListItem >
+      <ListItem  className="todo_item">
+      
         <ListItemText primary={props.todo.todo}/>
         <DeleteForeverIcon onClick={event=>db.collection('todos').doc(props.todo.id).delete()}/>
         <Button onClick={e=>setOpen(true)}>Edit</Button>
+      
       </ListItem>
     </List>
     </>
