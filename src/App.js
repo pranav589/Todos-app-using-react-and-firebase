@@ -42,13 +42,12 @@ export default function App() {
     </div>
     <form className='input'>
     <FormControl>
-      <InputLabel>Write a todo</InputLabel>
-      <Input value={input} onChange={event=>setInput(event.target.value)}/>
+      <input type='text'  placeholder="Write your todo" value={input} onChange={event=>setInput(event.target.value)} className='todoInput'/>
     </FormControl>
     {/* <input value={input} onChange={event=>setInput(event.target.value)}/>*/}
-      <Button type='submit' onClick={addTodo}variant="contained" color="primary" disabled={!input}>
+      <button type='submit' onClick={addTodo}variant="contained" className="todoAdd" color="primary" disabled={!input}>
        Add todo
-      </Button>
+      </button>
       {/*<button type='submit' onClick={addTodo}>Add todo</button>*/}
     </form>
     <ul>

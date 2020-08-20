@@ -36,18 +36,17 @@ function Todo(props){
   return(
     <>
     <Modal open={open} onClose={e=>setOpen(false)} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-    <div className={classes.paper}>
-      <InputLabel>Update your todo</InputLabel>
-      <Input value={input} onChange={event=>setInput(event.target.value)}/>
+    <div className={classes.paper} style={{textAlign:"center"}}>
+      <Input value={input} placeholder="Update your todo" onChange={event=>setInput(event.target.value)}/>
       <Button onClick={updateTodo}>Update</Button>
     </div>
     </Modal>
     <List className='todo_list'>
       <ListItem  className="todo_item">
       
-        <ListItemText primary={props.todo.todo}/>
-        <DeleteForeverIcon onClick={event=>db.collection('todos').doc(props.todo.id).delete()}/>
-        <Button onClick={e=>setOpen(true)}>Edit</Button>
+        <ListItemText className="todoText" primary={props.todo.todo}/>
+        <DeleteForeverIcon className="todoText"   onClick={event=>db.collection('todos').doc(props.todo.id).delete()}/>
+        <input type="submit" className="todoButton" onClick={e=>setOpen(true)} value="Edit"/>
       
       </ListItem>
     </List>
