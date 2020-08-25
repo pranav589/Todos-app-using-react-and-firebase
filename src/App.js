@@ -38,7 +38,7 @@ export default function App() {
   return (
     <div className='app'>
     <div className='head'>
-    <h2 style={{}}>Todo's App 💬</h2>
+    <h2 style={{}}>Todo's App 💬(React+Firebase)</h2>
     </div>
     <form className='input'>
     <FormControl>
